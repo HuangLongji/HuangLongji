@@ -367,6 +367,14 @@ embed[type="application/pdf"][src="about:blank"] { filter: invert(100%) contrast
 </ul>
 </div>
 <br>
+<%
+    Integer hitsCount = 
+      (Integer)application.getAttribute("hitCounter");
+       hitsCount += 1;
+    application.setAttribute("hitCounter", hitsCount);
+%>
+
+
 
 <!--<a name="collaborators"></a>-->
 <!--<h3>Collaborators</h3>-->
@@ -385,6 +393,6 @@ embed[type="application/pdf"][src="about:blank"] { filter: invert(100%) contrast
 
 
 <hr>
-<div id="footer" style="font-size:10">Longji Huang <i>Last updated: July, 2024</i></div>
+<div id="footer" style="font-size:10">Longji Huang <i>Last updated: July, 2024. Visits: <%= hitsCount%>.</i></div>
 
 </body></html>
